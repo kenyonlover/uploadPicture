@@ -21,7 +21,7 @@ public class FileUtils {
 
 
         // 生成新的文件名
-        String realPath = path + "/" + FileNameUtils.getFileName(fileName);
+        String realPath = path + FileNameUtils.getFileName(fileName);
 
         //使用原文件名
         //String realPath = path + "/" + fileName;
