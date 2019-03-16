@@ -20,8 +20,8 @@ public class SourceConfiguration extends WebMvcConfigurerAdapter {
 	@Override
 	public void addResourceHandlers(ResourceHandlerRegistry registry) {
 		//和页面有关的静态目录都放在项目的static目录下
-		registry.addResourceHandler("/static/**").addResourceLocations("classpath:/static/picture/");
-		//上传的图片放在真实路径下，通过127.0.0.1:8102/picture/xxxxx.jpg访问        path为文件的真是存放路径，通过配置文件读取
+		registry.addResourceHandler("/static/**").addResourceLocations("classpath:/static/");
+		//上传的图片放在真实路径下，通过http://localhost:8102/imgup/picture/xxx.jpg访问        path为文件的真是存放路径，通过配置文件读取
 		registry.addResourceHandler("/picture/**").addResourceLocations("file:"+path);
 		super.addResourceHandlers(registry);
 	}
